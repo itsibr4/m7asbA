@@ -1,5 +1,8 @@
 name: Build EXE
 
+permissions:
+  contents: write
+
 on:
   push:
     tags:
