@@ -127,13 +127,13 @@ class DeveloperPage(QWidget):
         telegram_btn.setObjectName("contactBtn")
         telegram_btn.setFixedHeight(48)
         telegram_btn.setCursor(Qt.PointingHandCursor)
-        telegram_btn.clicked.connect(lambda: QDesktopServices.openUrl(QUrl("https://t.me/developer_username")))
+        telegram_btn.clicked.connect(lambda: QDesktopServices.openUrl(QUrl("https://t.me/itsibr44")))
 
         email_btn = QPushButton("📧 إرسال بريد")
         email_btn.setObjectName("contactBtn")
         email_btn.setFixedHeight(48)
         email_btn.setCursor(Qt.PointingHandCursor)
-        email_btn.clicked.connect(lambda: QDesktopServices.openUrl(QUrl("mailto:developer@example.com")))
+        email_btn.clicked.connect(lambda: QDesktopServices.openUrl(QUrl("itslh44@gmail.com")))
 
         btn_row.addWidget(telegram_btn)
         btn_row.addWidget(email_btn)
