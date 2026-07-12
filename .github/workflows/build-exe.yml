@@ -28,7 +28,7 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller --onefile --windowed --name "نظام_المحاسبة_v2.1" --clean --noconfirm --hidden-import PySide6.QtCore --hidden-import PySide6.QtGui --hidden-import PySide6.QtWidgets --hidden-import sqlite3 main.py
+          pyinstaller --onefile --windowed --name "نظام_المحاسبة_v2" --clean --noconfirm --hidden-import PySide6.QtCore --hidden-import PySide6.QtGui --hidden-import PySide6.QtWidgets --hidden-import sqlite3 main.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
