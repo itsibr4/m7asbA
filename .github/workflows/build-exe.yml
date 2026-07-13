@@ -21,6 +21,10 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Remove root __init__.py (breaks PyInstaller local imports)
+        shell: bash
+        run: rm -f __init__.py
+
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
@@ -28,7 +32,7 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller --onefile --windowed --name "نظام_المحاسبة_v2" --clean --noconfirm --hidden-import PySide6.QtCore --hidden-import PySide6.QtGui --hidden-import PySide6.QtWidgets --hidden-import sqlite3 --hidden-import database --hidden-import login_window --hidden-import main_window --hidden-import settings --hidden-import pages --hidden-import pages.customers_page --hidden-import pages.dashboard_page --hidden-import pages.developer_page --hidden-import pages.expenses_page --hidden-import pages.inventory_page --hidden-import pages.pos_page --hidden-import pages.products_page --hidden-import pages.reports_page --hidden-import pages.settings_page --hidden-import pages.users_page --collect-submodules pages main.py
+          pyinstaller --onefile --windowed --name "نظام_المحاسبة_الابيض_v2" --clean --noconfirm --hidden-import PySide6.QtCore --hidden-import PySide6.QtGui --hidden-import PySide6.QtWidgets --hidden-import sqlite3 --hidden-import database --hidden-import login_window --hidden-import main_window --hidden-import settings --hidden-import pages --hidden-import pages.customers_page --hidden-import pages.dashboard_page --hidden-import pages.developer_page --hidden-import pages.expenses_page --hidden-import pages.inventory_page --hidden-import pages.pos_page --hidden-import pages.products_page --hidden-import pages.reports_page --hidden-import pages.settings_page --hidden-import pages.users_page --collect-submodules pages main.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
